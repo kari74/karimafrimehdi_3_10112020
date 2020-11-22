@@ -1,0 +1,59 @@
+.section{
+    height: 500px;
+    line-height: 500px;
+    background-color: $color-primary;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+  
+  /*loader Quart  de cercle*/
+  
+  .loader{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    animation-iteration-count: 3s;
+  }
+  
+  .loader-quart{
+    border-radius: 50%;
+    border: 6px solid rgba(255,255,255,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .loader-quart::after{
+    content: "";
+    position: absolute;
+    top: -6;
+    left: -6;
+    bottom: -6;
+    right: -6;
+    width: 50px;
+    height: 50px;
+    border: 6px solid transparent;
+    border-top-color: #fff;
+    animation: spin 2s linear 2s infinite;
+    -webkit-animation: spin 2s linear 2s infinite;
+    border-radius: 50px;
+  }
+  
+  @-webkit-keyframes spin{
+    0%{-webkit-transform: rotate(0deg);transform: rotate(0deg);
+    }
+    100%{ -webkit-transform: rotate(360deg);transform: rotate(360deg);}
+  }
+  
+  
+  @keyframes spin{
+    0%{-webkit-transform: rotate(0deg); transform: rotate(0deg);
+    }
+    100%{-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+  
+  }
+  
