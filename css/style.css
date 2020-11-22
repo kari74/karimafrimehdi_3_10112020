@@ -6,6 +6,34 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background: #f6f6f6;
+}
+
+/*.logo{
+  @include primary-font;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}*/
+.logo-page {
+  display: flex;
+  justify-content: center;
+}
+
+.img-logo {
+  width: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background-color: lightgrey;
 }
 
 .menu-choix {
@@ -14,6 +42,7 @@
   background-color: white;
   flex-direction: row;
   justify-content: flex-start;
+  margin: 10px;
 }
 
 .menu_choix_plat_noms {
@@ -56,6 +85,51 @@
 
 .resto_image-alafrancaise {
   background-image: url(../images/restaurants/alafrancaise.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.resto_image-palette {
+  background-image: url(../images/restaurants/lapalettedugout.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.resto_image-noteenchantee {
+  background-image: url(../images/restaurants/lanoteenchantee.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.resto_image-ledelicedessens {
+  background-image: url(../images/restaurants/ledelicedessens.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -133,7 +207,7 @@
   }
 }
 .logo {
-  font: " Shrikhand ", cursive;
+  font: "shrikhand", "sans-cherif";
   display: flex;
   justify-content: center;
   flex-direction: column;
