@@ -1,31 +1,61 @@
-@font-face {
-  font-family: 'Shrikhand' 'sans-serif';
- src: url(Shrikhand-regular.otf) format(otf);
+
+
+@import "variables.scss";
+@import "reset.scss";
+@import "font.scss";
+@import "animation.scss";
+@import "header.scss";
+@import "mixin.scss";
+@import "pages.scss";
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  background: $background-carte;
+
+  .ville{
+    background-color: #dbd9d9;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    i {
+      margin-right: 15px;
+    }
+  }
 }
 
-@import "../toupet/variables.scss";
-@import "../toupet/mixin.scss";
-@import"../toupet/pages.scss";
-
-
-.section{
-  height: 500px;
-  line-height: 500px;
-  background-color: $color-primary;
+h1{
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  text-align: center;
+  font-family: 'roboto','sans-sherif';
+  font-size: 35px;
 }
 
-/*loader Quart  de cercle*/
+p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
 
+/*
+
+/*loader Quart  de cercle*/
+/*
 .loader{
   width: 50px;
   height: 50px;
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  animation-iteration-count: 3s;
+ 
 }
 
 .loader-quart{
@@ -53,112 +83,17 @@
   border-radius: 50px;
 }
 
-@-webkit-keyframes spin{
-  0%{-webkit-transform: rotate(0deg);transform: rotate(0deg);
-  }
-  100%{ -webkit-transform: rotate(360deg);transform: rotate(360deg);}
-}
-
-
-@keyframes spin{
-  0%{-webkit-transform: rotate(0deg); transform: rotate(0deg);
-  }
-  100%{-webkit-transform: rotate(360deg);transform: rotate(360deg);}
-
-}
-
-.logo{
-    @include primary-font;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
-  & .img-logo{
-    width : 230px;
-    display : flex ;
-    justify-content : center ;
-    align-items : center ;
-    font-family: 'Shrikhand','sans-sherif';
-  }
-
-}
-
-.logo-page{
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  font-family: 'Shrikhand', 'sans-sherif';
-}
-
-.logo_img{
-  width: 150px;
-  margin: 15px;
-}
-
+*/
 .retour{
   width: 20%;
   margin: 10px;
   display: flex;
   align-items: center;
 }
-h2{
-  font-family: 'Roboto','sans-serif';
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 15px;
-}
 
-h3{
-  display: flex;
-  font-size: 18px;
-  font-family: 'roboto';
-  margin: 10px 0px 0px 5px;
-}
 
-.entrees,.plat, .dessert{
-  border-bottom: 4px solid #99e2d0;
-}
 
-.container{
-  width: auto;
-}
-main{
-    width: auto;
-    @include secondary-font;
-    background: $background-carte;
-  }
- 
-.header{
-  margin: 10px;
-  background-color: whitesmoke;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0px 0px 30px;
-  align-items: center;;
-
-  & .header-ville{
-      width : 100%;
-      display : flex ;
-      justify-content : center ;
-      background-color: lightgrey;
-      height: 50px;
-      align-items: center; 
-      font-family: 'roboto','sans-sherif';
-  }
-
-}
-
-.header_titre{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-family: 'roboto','sans-sherif';
-}
-
-.header_explorer{
+.button{
   background:linear-gradient($color-primary,5%,$color-secondary);
   color: $background-carte;
   border-radius: 15px;
@@ -180,12 +115,19 @@ main{
   text-align: center;
   color:#adaaaa
 }
-
-.nav_ul{
-  list-style-type: none;
+h2{
+  padding-left: 20px;
+}
+.manual{
   padding: 0px;
-  
-    & .nav_ul_li{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    
+    .manual-card{
     border-radius: $background-carte solid 15px ;
     background-color: $background-carte;
     border: #f2f2f2 2px solid;
@@ -197,26 +139,26 @@ main{
     margin-bottom: 15px;
     margin-left: auto;
 
-      & .nav_ul_li_number{
-        margin-right: 15px;
+      .number{
         margin-right: 15px;
         border: solid 2px $color-primary;
         border-radius: 50%;
         background:$color-primary;
         font-size: 18px;
         color: white;
-        height: 42px;
-        width: 15px;
+        height: 22px;
+        width: 22px;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: -15px;
     }
 
   }
 
 }
 
-.nav_ul_li p{
+.manual-text{
   font-weight: bold;
   font-family: 'roboto';
 }
@@ -240,13 +182,16 @@ a{
   color: lightslategray;
 }
 
-
-
 .resto{
+  background:$background-carte;
+  padding-bottom: 40px;
+}
+
+.cards{
   flex-direction: row;    
   flex-wrap: wrap;
   justify-content: center;
-  width: 95%;
+  width: 100%;
   background-color: $background-carte;
   
     & .resto_1_card{
@@ -364,14 +309,19 @@ a{
   margin-top: 50px;
 }
 
+
 .footer-container{ 
   background-color: #353535;
-    
-    & ul{
+  .container
+  {
+    max-width: 1300px;
+    margin: auto;
+
+    ul{
       list-style-type: none;
       margin: 10px;
       padding: 10px;
-    
+    }
   }
 }
   
@@ -383,6 +333,7 @@ a{
   margin: 15px;
   padding: 10px;
 }
+
 /*scss pages*/
 .carte{
   display: flex;
@@ -392,17 +343,7 @@ a{
   width: 100%;
   align-items: center;
 }
-/*.logo{
-@include primary-font;
-display: flex;
-justify-content: center;
-flex-direction: column;
-}*/
 
-.logo-page{
-display: flex;
-justify-content: center;
-}
 .img-logo {
 width: 230px;
 display: flex;
@@ -587,23 +528,9 @@ h4{
   .menu-choix{
     height: 70px;
   }
-
-  .resto{
-    margin-left: 35px;
-  }
-}
-
-@media screen and (max-width: 930px) and (min-width: 482px){
-  .resto{
-    margin-left: 25px;
-  }
 }
 
 @media(max-width: 481px){
-  .resto{
-    margin-left: 10px;
-  }
-
   .resto_h2 {
     padding-top: 50px;
     margin: 50px 0px 15px 20px;

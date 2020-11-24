@@ -8,59 +8,49 @@
     <title>OhMyFood</title>
  </head>
  <body>
-     <section class="section">
-        <span class="loader loader-quart"></span> 
-        chargement...
-     </section>
-     <container>
-            <div class="logo">
+     <div class="loading">
+        <h2>chargement...</h2>
+     </div>
+        <header class="logo">
                 <img class="img-logo" src="images/logo/ohmyfood.png" alt="logo">
+        </header>
+        <section class="intro">  
+            <div class="ville">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                Paris, Belleville
             </div>
-           <!--debut header-->
-        <div class="header">  
-            <div class="header-ville">
-                <span class="fas fa-map-marker-alt header__ville--icone" aria-hidden="true"></span>
-                    Paris, Belleville
-            </div>
-            <h2 class="header_titre">
-                Réservez le menu qui vous convient
-            </h2>
+            <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception sélectionnés par nos soins</p>
-            <button class="header_explorer">
+            <button class="button">
                 Explorer nos restaurants
             </button>
+        </section>
+       
+        <div class="manual">
+            <h2>Fonctionnement</h2>
+            <a class="manual-card" href="#">
+                <span class="number">1</span>
+                <span class="fas fa-mobile-alt icone" aria-hidden="true"></span>
+                <p class="manual-text">Choisissez un restaurant</p>
+            </a>
+             <a class="manual-card" href="#">
+                <span class="number">2</span>
+                <span class="fas fa-mobile-alt icone" aria-hidden="true"></span>
+                <p class="manual-text">Composez votre menu</p>
+            </a>
+            <a class="manual-card" href="#">
+                <span class="number">3</span>
+                <span class="fas fa-mobile-alt icone" aria-hidden="true"></span>
+                <p class="manual-text">Dégustez au restaurant</p>
+            </a>
         </div>
-        <!--fin header-->
-        <!--début menu-->
-        <nav class="nav">
-            <h2 class="nav_titre">
-                Fonctionnement
-            </h2>
-            <ul class="nav_ul">
-                <li class="nav_ul_li">
-                    <span class="nav_ul_li_number">1</span>
-                    <span class="fas fa-mobile-alt icone" aria-hidden="true"></span>
-                    <p>Choisissez un restaurant</p>
-                </li>
-                <li class="nav_ul_li">
-                    <span class="nav_ul_li_number">2</span>
-                    <span class="fas fa-bars icone" aria-hidden="true"></span>
-                    <p>Composez votre menu </p>
-                </li>
-                <li class="nav_ul_li">
-                    <span class="nav_ul_li_number">3</span>
-                    <span class="fas fa-store icone" aria-hidden="true"></span>
-                        <p>Dégustez au restaurant</p>
-                </li>
-            </ul>
-        </nav>
         <!--fin menu-->
-        <!-- debut section resto-->
+        <!-- debut resto-->
         <section class="resto">
             <h2 class="resto_h2">
                 Restaurants
             </h2>
-            <div class="resto">
+            <div class="cards">
                 <a class="resto_1" href="./palette.html">
                     <div class="resto_1_card">
                         <div class="resto_image-acceuil-palette">
@@ -68,12 +58,12 @@
                                 Nouveau
                             </span>
                         </div>
-                            <div class="nom_resto_h3">
-                                <h3>
-                                    La palette du goût
-                                </h3>
-                                <p>Ménilmontant</p> <i class="far fa-heart icone-coeur" aria-hidden="true"></i>
-                            </div>
+                        <div class="nom_resto_h3">
+                            <h3>
+                                La palette du goût
+                            </h3>
+                            <p>Ménilmontant</p> <i class="far fa-heart icone-coeur" aria-hidden="true"></i>
+                        </div>
                     </div>
                 </a>
                 <a class="resto_1" href="./lanoteenchantee.html">
@@ -83,24 +73,25 @@
                                 Nouveau
                             </span>
                         </div>
-                            <div class="nom_resto_h3">
-                                <h3>
-                                    La note enchantée
-                                </h3>
-                                <p>charonne</p>
-                                <i class="far fa-heart icone-coeur" aria-hidden="true"></i>
-                            </div>
+                        <div class="nom_resto_h3">
+                            <h3>
+                                La note enchantée
+                            </h3>
+                            <p>charonne</p>
+                            <i class="far fa-heart icone-coeur" aria-hidden="true"></i>
+                        </div>
                     </div>
                 </a>
                 <a class="resto_1" href="./alafrancaise.html">
                     <div class="resto_1_card">
-                        <div class="resto_image-acceuil-alafrancaise"></div>
+                        <div class="resto_image-acceuil-alafrancaise">
                             <div class="nom_resto_h3">
                                 <h3>
                                     A la française
                                 </h3>
                                 <p>Cité Rouge</p>
                                 <i class="far fa-heart icone-coeur" aria-hidden="true"></i>
+                            </div>
                         </div>
                     </div>
                 
@@ -108,7 +99,7 @@
                 <a class="resto_1" href="./ledelicedessens.html">
                     <div class="resto_1_card">
                         <div class="resto_image-acceuil-ledelicedessens"></div>
-                            <div class="nom_resto_h3">
+                        <div class="nom_resto_h3">
                             <h3>
                                 Le délice des sens
                             </h3>
@@ -118,40 +109,39 @@
                     </div>
                 </a>
             </div>
+        </section>
         <!--fin resto-->
         <!--footer-->
-            <footer>
-                <footer class="footer-container">
-                    <h2 class="footer__h2">
-                        ohmyfood
-                    </h2>
-                    <ul class="footer__ul">
-                        <li class="footer__ul--li">
-                            <a class="footer__ul--a" href="#">
-                                <span class="fas fa-utensils" aria-hidden="true"></span>
-                                Proposer un restaurant
-                            </a>
-                        </li>
-                        <li class="footer__ul--li">
-                            <a class="footer__ul--a" href="#">
-                                <span class="fas fa-hands-helping" aria-hidden="true"></span>
-                                Devenir Partenaire
-                            </a>
-                        </li>
-                        <li class="footer__ul--li">
-                            <a class="footer__ul--a" href="#">
-                                Mentions légales
-                            </a>
-                        </li>
-                        <li class="footer__ul--li">
-                            <a class="footer__ul--a" href="mailto:frimehdi.karima@gmail.com">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-                </footer>
-            </footer>
-        </section>
-    </container>
-    </body>
+    <footer class="footer-container">
+        <div class="container">
+            <h2 class="footer__h2">
+                ohmyfood
+            </h2>
+            <ul class="footer__ul">
+                <li class="footer__ul--li">
+                    <a class="footer__ul--a" href="#">
+                        <span class="fas fa-utensils" aria-hidden="true"></span>
+                        Proposer un restaurant
+                    </a>
+                </li>
+                <li class="footer__ul--li">
+                    <a class="footer__ul--a" href="#">
+                        <span class="fas fa-hands-helping" aria-hidden="true"></span>
+                        Devenir Partenaire
+                    </a>
+                </li>
+                <li class="footer__ul--li">
+                    <a class="footer__ul--a" href="#">
+                        Mentions légales
+                    </a>
+                </li>
+                <li class="footer__ul--li">
+                    <a class="footer__ul--a" href="mailto:frimehdi.karima@gmail.com">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
 </html>
