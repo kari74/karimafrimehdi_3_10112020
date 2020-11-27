@@ -1,0 +1,28 @@
+@media(max-width: 1300px){
+    .menu__button{
+      width: 30%;
+    }
+    .menu-choix{
+      height: 70px;
+    }
+  }
+  
+  @media(max-width: 481px){
+    .resto_h2 {
+      padding-top: 50px;
+      margin: 50px 0px 15px 20px;
+    }
+  
+    .header_explorer{
+      width: 45%;
+    }
+  
+    .header p{
+      font-size: 20px;
+    }
+  
+    .header_titre{
+    font-size: 31px;
+    font-family: 'roboto','sans-sherif';
+    }
+  }

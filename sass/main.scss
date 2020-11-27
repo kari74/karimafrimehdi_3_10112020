@@ -7,6 +7,12 @@
 @import "header.scss";
 @import "mixin.scss";
 @import "pages.scss";
+@import "footer.scss";
+@import "media.scss";
+
+
+/*intro*/
+
 
 .intro {
   display: flex;
@@ -31,6 +37,13 @@
   }
 }
 
+.intro p{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 21px;
+}
+
 h1{
   display: flex;
   justify-content: center;
@@ -39,51 +52,6 @@ h1{
   font-size: 35px;
 }
 
-p {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-/*
-
-/*loader Quart  de cercle*/
-/*
-.loader{
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
- 
-}
-
-.loader-quart{
-  border-radius: 50%;
-  border: 6px solid rgba(255,255,255,0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-.loader-quart::after{
-  content: "";
-  position: absolute;
-  top: -6;
-  left: -6;
-  bottom: -6;
-  right: -6;
-  width: 50px;
-  height: 50px;
-  border: 6px solid transparent;
-  border-top-color: #fff;
-  animation: spin 2s linear 2s infinite;
-  -webkit-animation: spin 2s linear 2s infinite;
-  border-radius: 50px;
-}
-
-*/
 .retour{
   width: 20%;
   margin: 10px;
@@ -100,7 +68,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35%;
+  width: 40%;
   border:none;
   margin-right: 25px;
   margin-left: 25px;
@@ -108,16 +76,8 @@ p {
   cursor: pointer;
   }
 
-.header p{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color:#adaaaa
-}
-h2{
-  padding-left: 20px;
-}
+/*manual*/
+
 .manual{
   padding: 0px;
   padding-top: 40px;
@@ -132,12 +92,11 @@ h2{
     background-color: $background-carte;
     border: #f2f2f2 2px solid;
     border-radius: 15px;
-    padding-right: 5px;
     display: flex;
     align-items: center;
-    width: 95%;
+    width: 90%;
     margin-bottom: 15px;
-    margin-left: auto;
+    margin-left: 20px;
 
       .number{
         margin-right: 15px;
@@ -158,67 +117,65 @@ h2{
 
 }
 
+.manual-card:hover{
+  background:linear-gradient(#c3a6e7,5%,#f1a8dc);
+  .icone:hover{
+    color: $color-primary;
+  }
+}
+
 .manual-text{
   font-weight: bold;
   font-family: 'roboto';
+  margin-left: 20px;
 }
+
+.manual h2{
+  padding-left: 15px;
+}
+
+/*cards*/
 
 a{
   color: $color-footer;
   text-decoration: none;
 }
-.nav_ul_li:hover{
-  /*background:linear-gradient($color-primary,25%,$color-secondary);*/
-  background: change-color($color: #f3e2f0);
 
-  & .icone:hover{
-    color: #eca0de;
-  }
-}
 
-.icone{
-  margin: 15px;
-  display: flex;
-  color: lightslategray;
-}
-
-.resto{
-  background:$background-carte;
-  padding-bottom: 40px;
-}
 
 .cards{
-  flex-direction: row;    
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  background-color: $background-carte;
-  
-    & .resto_1_card{
-      border: 1px solid white;
-      width: 95%;
-      border-radius: 25px;
-      background-color: white;
-      margin: 10px;
-      margin-bottom: 25px;
-      justify-content: space-between;
-      cursor: pointer;
-      height: 280px;
-  }
+  background:$background-carte;
+  padding-bottom: 20px;
 }
-.nom_resto_h3{
+
+.resto_1_card{
+  border: 1px solid white;
+  width: 100%;
+  border-radius: 25px;
+  background-color: white;
+  margin-bottom: 25px;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 265px;
+}
+.nom_resto{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   
-  & p{
+  p{
     margin: 5px;
   }
 }
+
+h3{
+  margin: 0px;
+}
+
 .resto_h2{
-  padding-top: 50px;
-  margin: 50px 0px 15px 0px;
+  padding-left: 25px;
+  margin: 25px 0px 15px 0px;
 }
 
 .resto_news{
@@ -228,6 +185,13 @@ a{
   background-color :$color-tertiary;
   width: 20%;
   margin: 15px;
+}
+
+
+.icone{
+  margin: 15px;
+  display: flex;
+  color: lightslategray;
 }
 
 .far{
@@ -242,6 +206,9 @@ a{
 .fa-heart:hover {
   background:linear-gradient($color-primary,25%,$color-secondary);
 }
+
+
+/*images*/
 
 .resto_image-acceuil-palette{
   background-image: url(../images/restaurants/lapalettedugout.jpg);
@@ -305,34 +272,6 @@ a{
   align-items: baseline;
 }
 
-.footer{
-  margin-top: 50px;
-}
-
-
-.footer-container{ 
-  background-color: #353535;
-  .container
-  {
-    max-width: 1300px;
-    margin: auto;
-
-    ul{
-      list-style-type: none;
-      margin: 10px;
-      padding: 10px;
-    }
-  }
-}
-  
-.footer__ul--a{
-  color: $background-carte;
-}
-.footer__h2{
-  color: $background-carte;
-  margin: 15px;
-  padding: 10px;
-}
 
 /*scss pages*/
 .carte{
@@ -343,6 +282,7 @@ a{
   width: 100%;
   align-items: center;
 }
+
 
 .img-logo {
 width: 230px;
@@ -411,18 +351,19 @@ h4{
     align-self: flex-end;
 }
 
-.menu__button{
-  background: linear-gradient(#9356dc, 5%, #ff79da);
-  color: #f6f6f6;
-  border-radius: 15px;
+.menu__choix_plat_prix:hover{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  border: none;
-  margin: 30px;
-  height: 30px;
-  cursor: pointer;
+  width: 18%;
+  justify-content: flex-end;
+  height: 67px;
+  align-self: flex-end;
+  align-items: flex-end;
+  background: $color-tertiary;
+  border: 1px solid transparent;
+  border-top-right-radius: 19%;
+  border-bottom-right-radius: 20%;
+  visibility: visible;
+
 }
 
 .menu__carte_enregistrement{
@@ -446,106 +387,4 @@ h4{
   justify-content: center;
   width: 40px;
   color: white;
-}
-
-.footer-container{ 
-  background-color: #353535;
-    
-    & ul{
-      list-style-type: none;
-      margin: 10px;
-      padding: 10px;
-    
-  }
-
-}
-  
-.footer__ul--a{
-  color: $background-carte;
-  text-decoration: none;
-}
-.footer__h2{
-  color: $background-carte;
-  margin: 15px;
-  padding: 10px;
-}
-
-.img-alafrancaise{
-  background-image: url(../images/restaurants/alafrancaise.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 200px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: baseline;
-  flex-direction: column;
-
-}
-
-.img-palette{
-  background-image: url(../images/restaurants/lapalettedugout.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 200px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: baseline;
-  flex-direction: column;
-}
-
-.img-noteenchantee{
-  background-image: url(../images/restaurants/lanoteenchantee.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 200px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: baseline;
-  flex-direction: column;
-}
-    
-.img-ledelicedessens{
-  background-image: url(../images/restaurants/ledelicedessens.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 200px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: baseline;
-  flex-direction: column;
-}
-  
-
-
-@media(max-width: 1300px){
-  .menu__button{
-    width: 30%;
-  }
-  .menu-choix{
-    height: 70px;
-  }
-}
-
-@media(max-width: 481px){
-  .resto_h2 {
-    padding-top: 50px;
-    margin: 50px 0px 15px 20px;
-  }
-
-  .header_explorer{
-    width: 45%;
-  }
-
-  .header p{
-    font-size: 20px;
-  }
-
-.header_titre{
-  font-size: 31px;
-  font-family: 'roboto','sans-sherif';
-}
 }

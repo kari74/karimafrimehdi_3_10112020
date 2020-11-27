@@ -8,9 +8,9 @@
     <title>OhMyFood</title>
  </head>
  <body>
-     <div class="loading">
+    <!-- <div class="loading">
         <h2>chargement...</h2>
-     </div>
+     </div>-->
         <header class="logo">
                 <img class="img-logo" src="images/logo/ohmyfood.png" alt="logo">
         </header>
@@ -30,23 +30,23 @@
             <h2>Fonctionnement</h2>
             <a class="manual-card" href="#">
                 <span class="number">1</span>
-                <span class="fas fa-mobile-alt icone" aria-hidden="true"></span>
+                <div class="fas fa-mobile-alt icone" aria-hidden="true"></div>
                 <p class="manual-text">Choisissez un restaurant</p>
             </a>
              <a class="manual-card" href="#">
                 <span class="number">2</span>
-                <span class="fas fa-mobile-alt icone" aria-hidden="true"></span>
+                <div class="fas fa-bars icone" aria-hidden="true"></div>
                 <p class="manual-text">Composez votre menu</p>
             </a>
             <a class="manual-card" href="#">
                 <span class="number">3</span>
-                <span class="fas fa-mobile-alt icone" aria-hidden="true"></span>
+                <div class="fas fa-store icone" aria-hidden="true"></div>
                 <p class="manual-text">Dégustez au restaurant</p>
             </a>
         </div>
         <!--fin menu-->
         <!-- debut resto-->
-        <section class="resto">
+        <section class="cards">
             <h2 class="resto_h2">
                 Restaurants
             </h2>
@@ -58,7 +58,7 @@
                                 Nouveau
                             </span>
                         </div>
-                        <div class="nom_resto_h3">
+                        <div class="nom_resto">
                             <h3>
                                 La palette du goût
                             </h3>
@@ -73,7 +73,7 @@
                                 Nouveau
                             </span>
                         </div>
-                        <div class="nom_resto_h3">
+                        <div class="nom_resto">
                             <h3>
                                 La note enchantée
                             </h3>
@@ -85,20 +85,23 @@
                 <a class="resto_1" href="./alafrancaise.html">
                     <div class="resto_1_card">
                         <div class="resto_image-acceuil-alafrancaise">
-                            <div class="nom_resto_h3">
-                                <h3>
-                                    A la française
-                                </h3>
-                                <p>Cité Rouge</p>
-                                <i class="far fa-heart icone-coeur" aria-hidden="true"></i>
-                            </div>
+                            <span class="resto_news">
+                                Nouveau
+                            </span>
+                        </div>
+                        <div class="nom_resto">
+                            <h3>
+                                A la française
+                            </h3>
+                            <p>Cité Rouge</p>
+                            <i class="far fa-heart icone-coeur" aria-hidden="true"></i>
                         </div>
                     </div>
                 </a>
                 <a class="resto_1" href="./ledelicedessens.html">
                     <div class="resto_1_card">
                         <div class="resto_image-acceuil-ledelicedessens"></div>
-                        <div class="nom_resto_h3">
+                        <div class="nom_resto">
                             <h3>
                                 Le délice des sens
                             </h3>

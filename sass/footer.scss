@@ -1,0 +1,28 @@
+.footer{
+    margin-top: 50px;
+  }
+  
+  
+  .footer-container{ 
+    background-color: #353535;
+    .container
+    {
+      max-width: 1300px;
+      margin: auto;
+  
+      ul{
+        list-style-type: none;
+        margin: 10px;
+        padding: 10px;
+      }
+    }
+  }
+    
+  .footer__ul--a{
+    color: $background-carte;
+  }
+  .footer__h2{
+    color: $background-carte;
+    margin: 15px;
+    padding: 10px;
+}

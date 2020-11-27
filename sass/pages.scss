@@ -1,9 +1,4 @@
-    .carte{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background:$background-carte;
-}
+
 /*.logo{
   @include primary-font;
   display: flex;
@@ -11,10 +6,7 @@
   flex-direction: column;
 }*/
 
-.logo-page{
-  display: flex;
-  justify-content: center;
-}
+
 .img-logo {
   width: 230px;
   display: flex;
@@ -23,22 +15,51 @@
   flex-direction: column;
 }
 
+.menu__title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #f6f6f6;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+  font-family: Shrikhand,sans-serif;
+}   
+
+h4{
+  align-self: end;
+    margin: 22px;
+    margin-bottom: 7px;
+    font-weight: 400;
+}
+
 .menu{
   display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    background-color: lightgrey;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.carte{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background:$background-carte;
+  width: 100%;
+  align-items: center;
 }
 
 .menu-choix{
-    display: flex;
-    border-radius: 10px;
-    background-color: white;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin: 10px;
-
+  display: flex;
+  border-radius: 10px;
+  background-color: white;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 10px;
+  width: 95%;
+  border: transparent;
+  padding: 0px;
+  cursor: pointer;
 }
 
 .menu_choix_plat_noms{
@@ -60,86 +81,111 @@
     height: 30px;
 }
 
-.footer-container{ 
-    background-color: #353535;
-      
-      & ul{
-        list-style-type: none;
-        margin: 10px;
-        padding: 10px;
-      
-    }
+.menu__choix_plat{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin: 10px;
+  margin-bottom: 5px;
+  text-align: start;
+  width: 100%;
+}
 
-  }
+.menu__choix_plat_prix{
+  flex-direction: row;
+    width: 10%;
+    height: 30%;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+.menu__choix_plat_prix:hover{
+  display: flex;
+  width: 18%;
+  justify-content: flex-end;
+  height: 67px;
+  align-self: flex-end;
+  align-items: flex-end;
+  background: $color-tertiary;
+  border: 1px solid transparent;
+  border-top-right-radius: 19%;
+  border-bottom-right-radius: 20%;
+  visibility: visible;
+
+}
+
+.menu__carte_enregistrement{
+  display: flex;
+  width: 18%;
+  justify-content: flex-end;
+  height: 67px;
+  align-self: flex-end;
+  align-items: flex-end;
+  background: $color-tertiary;
+  border: 1px solid transparent;
+  border-top-right-radius: 19%;
+  border-bottom-right-radius: 20%;
+  visibility: visible;
+}
+
+.cercle{
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  width: 40px;
+  color: white;
+}
+
+/*images*/
+
+.img-alafrancaise{
+  background-image: url(../images/restaurants/alafrancaise.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  flex-direction: column;
+
+}
+
+.img-palette{
+  background-image: url(../images/restaurants/lapalettedugout.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  flex-direction: column;
+}
+
+.img-noteenchantee{
+  background-image: url(../images/restaurants/lanoteenchantee.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  flex-direction: column;
+}
     
-  .footer__ul--a{
-    color: $background-carte;
-    text-decoration: none;
-  }
-  .footer__h2{
-    color: $background-carte;
-    margin: 15px;
-    padding: 10px;
-  }
-
-  .resto_image-alafrancaise{
-    background-image: url(../images/restaurants/alafrancaise.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 200px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: baseline;
+.img-ledelicedessens{
+  background-image: url(../images/restaurants/ledelicedessens.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  flex-direction: column;
+}
   
-  }
-
-  .resto_image-palette{
-    background-image: url(../images/restaurants/lapalettedugout.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 200px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: baseline;
-  }
-
-  .resto_image-noteenchantee{
-    background-image: url(../images/restaurants/lanoteenchantee.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 200px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: baseline;
-  }
-      
-  .resto_image-ledelicedessens{
-    background-image: url(../images/restaurants/ledelicedessens.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 200px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: baseline;
-  }
     
