@@ -6,7 +6,9 @@
   flex-direction: column;
 }*/
 
-
+header{
+  display: flex;
+}
 .img-logo {
   width: 230px;
   display: flex;
@@ -19,11 +21,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 98%;
   background-color: #f6f6f6;
   border-top-left-radius: 45px;
   border-top-right-radius: 45px;
   font-family: Shrikhand,sans-serif;
+  padding: 10px;
 }   
 
 h4{
@@ -31,7 +34,21 @@ h4{
     margin: 22px;
     margin-bottom: 7px;
     font-weight: 400;
+    font-family: roboto,sans-serif;
 }
+.entrees{
+  border-bottom: 3px solid $color-tertiary;
+}
+
+.plat{
+  border-bottom: 3px solid $color-tertiary
+}
+
+.dessert{
+
+border-bottom: 3px solid $color-tertiary;
+}
+
 
 .menu{
   display: flex;
@@ -45,26 +62,48 @@ h4{
   justify-content: center;
   flex-direction: column;
   background:$background-carte;
-  width: 100%;
+  width: 95%;
   align-items: center;
 }
 
+
+
 .menu-choix{
   display: flex;
-  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
   background-color: white;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin: 10px;
   width: 95%;
-  border: transparent;
-  padding: 0px;
+  position: relative;
   cursor: pointer;
+  padding-right: 0px;
+  padding-top: 5px;
+  margin:20px 0px;
+  overflow: hidden;
+  border: none;
+  .animation_price{
+    opacity: 0;
+    position: absolute;
+  }
+}
+
+.menu-choix:hover{
+  .animation_price{
+    width: 100px;
+    background-color: $color-tertiary;
+    opacity: 1;
+    animation: icon-slide 2000ms ease-in;
+    right: 0;
+    height: 100%;
+    animation-direction: reverse;
+  }
 }
 
 .menu_choix_plat_noms{
     font-weight: bold;
     font-size: 15px;
+    font-family: Roboto,sans-serif;
 }
 
 
@@ -85,47 +124,56 @@ h4{
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  margin: 10px;
   margin-bottom: 5px;
   text-align: start;
-  width: 100%;
+  width: 68%;
+  padding-left: 5px;
 }
 
 .menu__choix_plat_prix{
-  flex-direction: row;
-    width: 10%;
-    height: 30%;
+    display: flex;
+    width: 5%;
+    height: 100%;
     justify-content: flex-end;
-    align-self: flex-end;
+    align-items: flex-end;
+    background-color: white;
+    font-weight: bold;
 }
 
-.menu__choix_plat_prix:hover{
-  display: flex;
-  width: 18%;
-  justify-content: flex-end;
-  height: 67px;
-  align-self: flex-end;
-  align-items: flex-end;
-  background: $color-tertiary;
-  border: 1px solid transparent;
-  border-top-right-radius: 19%;
-  border-bottom-right-radius: 20%;
-  visibility: visible;
-
+.menu-choix:hover{
+  .menu__choix_plat_prix{
+    display: flex;
+    width: 18%;
+    justify-content: flex-end;
+    align-items: center;
+    height: 67px;
+   /* align-self: flex-end;
+    align-items: flex-end;*/
+    background: white;
+    border: 1px solid transparent;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    visibility: visible;
+    
+    animation: price-slide 800ms ease-out;
+    .menu__carte_enregistrement{
+      visibility: visible;
+    }
+  }
 }
 
 .menu__carte_enregistrement{
   display: flex;
-  width: 18%;
+  width: 100px;
   justify-content: flex-end;
-  height: 67px;
+  height: 100%;
   align-self: flex-end;
   align-items: flex-end;
   background: $color-tertiary;
   border: 1px solid transparent;
   border-top-right-radius: 19%;
   border-bottom-right-radius: 20%;
-  visibility: visible;
+  visibility: hidden;
 }
 
 .cercle{
@@ -135,6 +183,7 @@ h4{
   justify-content: center;
   width: 40px;
   color: white;
+  animation: icon_cercle 800ms;
 }
 
 /*images*/

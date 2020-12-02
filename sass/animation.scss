@@ -1,14 +1,4 @@
-.loading{
-    z-index: -1;
-    animation: display-loader 3000s ease-in-out;
-    width: 100vw;
-    height: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
+
 
 @keyframes display-loader{
     0%, 99%{
@@ -27,19 +17,19 @@
     }
     100%{
          -webkit-transform: rotate(360deg);transform: rotate(360deg);}
-  }
+}
   
   
-  @keyframes spin{
+@keyframes spin{
     0%{
         -webkit-transform: rotate(0deg); transform: rotate(0deg);
     }
     100%{
         -webkit-transform: rotate(360deg);transform: rotate(360deg);}
   
-  }
+}
   
-  @keyframes header{
+@keyframes header{
     0%, 99%{
         opacity: 1;
         z-index: 2;
@@ -49,14 +39,37 @@
         z-index: 1;
     }
 }
-/*.heart{
-z-index: -1;
-animation: heart 3000s ease-in-out;
-width: 40px;
-height: 40px;
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-}*/
+
+/*animation carte menu*/
+
+
+@keyframes icon-slide{
+    0%{
+      transform: translateX(-50px);
+      
+    }
+    
+  }
+  
+  @keyframes price-slide{
+    0%{
+      transform: translateX(50px);
+    }
+    
+    100%{
+      transform: translateX(-50px);
+      
+    }
+  }
+  
+  @keyframes icon_cercle{
+    0%{
+      transform: rotate(0deg);
+    }
+  
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+
+
