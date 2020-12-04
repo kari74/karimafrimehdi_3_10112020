@@ -64,11 +64,13 @@
   
   @keyframes icon_cercle{
     0%{
-      transform: rotate(0deg);
+     transform: scale(1) rotate(0deg);
+     animation-duration: 2s;
     }
   
     100%{
-      transform: rotate(360deg);
+    transform: scale(1) rotate(360deg);
+    animation-duration: 2s;
     }
   }
 
