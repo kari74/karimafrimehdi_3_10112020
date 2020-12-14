@@ -1,22 +1,112 @@
-@media(max-width: 1300px){
-    .menu__button{
+@media screen and (min-width: 1024px) and (max-width: 1400px){
+    
+  .manual{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu__button{
       width: 30%;
     }
-    .menu-choix{
-      height: 70px;
+
+    .resto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 950px;
+    flex-wrap: wrap;
+    width: 100%;
+    
+  }
+    .resto_1_card{
+      height: 340px;
+    }
+
+    .footer_h2{
+      font-size: 30px;
+      padding-top: 20px;
+    }
+    ul{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+
+  @media screen and (min-width: 482px) and (max-width: 1024px) {
+   
+    .resto_1{
+      margin-right: 35px;
+    }
+    .resto_h2{
+      padding-top: 25px;
+    }
+    .resto_1_card{
+      height: 340px;
+    }
+    
+    .resto{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      height: 950px;
+      flex-wrap: wrap;
+      width: 100%;
+      
+    }
+    
+    .resto_news{
+      width: 30%;
+    }
+
+    .manual{
+      display: flex;
+      flex-direction: row;
+    }
+    ul{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .manual-text{
+      font-size: small;
     }
   }
   
   @media(max-width: 481px){
+    
+    .manual{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    
     .resto_h2 {
       padding-top: 50px;
       margin: 50px 0px 15px 20px;
+    }
+
+    .resto_news{
+      width: 15%;
     }
   
     .header_explorer{
       width: 45%;
     }
-  
+    .intro p{
+      font-size: 13px;
+    }
+
+    h1{
+      font-size: 23px;
+    }
+
     .header p{
       font-size: 20px;
     }
@@ -24,5 +114,8 @@
     .header_titre{
     font-size: 31px;
     font-family: 'roboto','sans-sherif';
+    }
+    .carte{
+      width: 100%;
     }
   }

@@ -1,44 +1,52 @@
 
 
-@keyframes display-loader{
-    0%, 99%{
-        opacity: 1;
-        z-index: 2;
-    }
-    100%{
-        opacity: 0;
-        z-index: 1;
-    }
+
+@keyframes slideLeft{
+  100%{
+    transform: translateX(-50px);
+    
+}
 }
 
-@-webkit-keyframes spin{
-    0%{
-        -webkit-transform: rotate(0deg);transform: rotate(0deg);
-    }
-    100%{
-         -webkit-transform: rotate(360deg);transform: rotate(360deg);}
+@keyframes iconslideLeft{
+  0%{
+    transform: translateX(60px);
+   
 }
-  
-  
+}
+
+@keyframes iconrotate{
+  0%{
+    transform: rotate(360deg);
+    
+  }
+}
+
+@keyframes load-spinner {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    background: $color-secondary;
+  }
+  5% {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity :0;
+  }
+}
+
 @keyframes spin{
-    0%{
-        -webkit-transform: rotate(0deg); transform: rotate(0deg);
-    }
-    100%{
-        -webkit-transform: rotate(360deg);transform: rotate(360deg);}
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+  }
+
   
-}
-  
-@keyframes header{
-    0%, 99%{
-        opacity: 1;
-        z-index: 2;
-    }
-    100%{
-        opacity: 0;
-        z-index: 1;
-    }
-}
 
 /*animation carte menu*/
 
@@ -64,14 +72,31 @@
   
   @keyframes icon_cercle{
     0%{
-     transform: scale(1) rotate(0deg);
-     animation-duration: 2s;
-    }
+     transform: rotate(0deg);
+     animation-duration: 3s;
+}
   
     100%{
-    transform: scale(1) rotate(360deg);
-    animation-duration: 2s;
-    }
+    transform: rotate(360deg);
+    animation-duration: 3s;
+}
   }
 
+
+  /*animation menu*/
+
+  @keyframes open-menu{
+    0%{
+        visibility: visible;
+        opacity: 0;
+    }
+    50%{
+      visibility: visible;
+      opacity: 0.5;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
 

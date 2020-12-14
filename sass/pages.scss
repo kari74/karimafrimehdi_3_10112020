@@ -1,10 +1,4 @@
 
-/*.logo{
-  @include primary-font;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}*/
 
 header{
   display: flex;
@@ -21,20 +15,18 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 98%;
+  width: 100%;
   background-color: #f6f6f6;
   border-top-left-radius: 45px;
   border-top-right-radius: 45px;
   font-family: Shrikhand,sans-serif;
-  padding: 10px;
+  padding: 10px 0px;
 }   
 
 h4{
   align-self: end;
-    margin: 22px;
-    margin-bottom: 7px;
-    font-weight: 400;
-    font-family: roboto,sans-serif;
+  font-weight: 400;
+  font-family: roboto,sans-serif;
 }
 .entrees{
   border-bottom: 3px solid $color-tertiary;
@@ -62,8 +54,9 @@ border-bottom: 3px solid $color-tertiary;
   justify-content: center;
   flex-direction: column;
   background:$background-carte;
-  width: 95%;
+  width: 100%;
   align-items: center;
+  margin: auto;
 }
 
 
@@ -74,17 +67,39 @@ border-bottom: 3px solid $color-tertiary;
   justify-content: space-between;
   border-radius: 20px;
   background-color: white;
-  width: 95%;
+  width: 100%;
+  height: 100px;
   position: relative;
   cursor: pointer;
   padding-right: 0px;
   padding-top: 5px;
-  margin:20px 0px;
   overflow: hidden;
+  text-overflow: ellipsis;
   border: none;
+  margin-bottom: 20px;
   .animation_price{
     opacity: 0;
     position: absolute;
+    height: 100px;
+  }
+  .menu__choix_plat_prix{
+   height: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   width: 100px;
+  }
+  .menu__carte_enregistrement{
+  opacity: 0;
+  position:absolute;
+  right: 0;
+  background: $color-tertiary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100px;
   }
 }
 
@@ -97,6 +112,21 @@ border-bottom: 3px solid $color-tertiary;
     right: 0;
     height: 100%;
     animation-direction: reverse;
+  }
+  .menu__choix_plat_prix{
+    animation: slideLeft 1s both;
+  
+}
+
+.menu__carte_enregistrement{
+  opacity: 1;
+  animation: iconslidLeft 1s both;
+  i{
+    opacity: 1;
+    animation: iconrotate 1s both;
+    animation-delay: 1s;
+
+}
   }
 }
 
@@ -126,11 +156,13 @@ border-bottom: 3px solid $color-tertiary;
   align-items: baseline;
   margin-bottom: 5px;
   text-align: start;
-  width: 68%;
+  width: 100%;
   padding-left: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.menu__choix_plat_prix{
+/*.menu__choix_plat_prix{
     display: flex;
     width: 5%;
     height: 100%;
@@ -138,10 +170,10 @@ border-bottom: 3px solid $color-tertiary;
     align-items: flex-end;
     background-color: white;
     font-weight: bold;
-}
+}*/
 
-.menu-choix:hover{
-  .menu__choix_plat_prix{
+/*.menu-choix:hover{
+ /* .menu__choix_plat_prix{
     display: flex;
     width: 18%;
     justify-content: flex-end;
@@ -149,7 +181,7 @@ border-bottom: 3px solid $color-tertiary;
     height: 67px;
    /* align-self: flex-end;
     align-items: flex-end;*/
-    background: white;
+  /*  background: white;
     border: 1px solid transparent;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -160,20 +192,22 @@ border-bottom: 3px solid $color-tertiary;
       visibility: visible;
     }
   }
-}
+}*/
 
 .menu__carte_enregistrement{
-  display: flex;
+  opacity: 0;
+  
+ /* display: flex;
   width: 100px;
   justify-content: flex-end;
   height: 100%;
   align-self: flex-end;
   align-items: flex-end;
-  background: $color-tertiary;
+  
   border: 1px solid transparent;
   border-top-right-radius: 19%;
   border-bottom-right-radius: 20%;
-  visibility: hidden;
+  visibility: hidden;*/
 }
 
 .cercle{
@@ -183,8 +217,12 @@ border-bottom: 3px solid $color-tertiary;
   justify-content: center;
   width: 40px;
   color: white;
-  animation: icon_cercle 3s ease-in-out;
-  
+  animation: icon_cercle 3s ease-out;
+    .cercle:hover{
+    -webkit-animation: icon_cercle 3s ease-out;
+    animation: icon_cercle 3s ease-out;
+    -webkit-animation: icon_cercle 3s ease-out;
+  }
 }
 
 /*images*/

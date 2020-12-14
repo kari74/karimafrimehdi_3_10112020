@@ -5,27 +5,34 @@
   
   .footer-container{ 
     background-color: #353535;
+    width: 100%;
+    padding-top: 20px;
     .container
     {
-      max-width: 1300px;
       margin: auto;
   
       ul{
         list-style-type: none;
         margin: 10px;
+        margin-top: 0px;
         padding: 10px;
-        font-family: Roboto,sans-serif;
+        padding-top: 0px;
+        font-family: 'roboto',sans-serif;
       }
     }
   }
-    
+  
+  
+
   .footer__ul--a{
     color: $background-carte;
+    margin: 10px;
   }
   .footer__h2{
     color: $background-carte;
-    margin: 15px;
+    margin: 10px;
     padding: 10px;
+    padding-bottom:0px;
     font-family: shrikhand, sans-serif;
     font-size: 20px;
 }
