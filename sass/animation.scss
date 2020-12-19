@@ -1,27 +1,40 @@
 
 
+@keyframes slideLeftcarte{
+  100%{
+    transform: translateX(-50px);
+    
+  }
+}
+
+@keyframes iconslideLeftcarte{
+  0%{
+    transform: translateX(50px);
+  }
+}
+
 
 @keyframes slideLeft{
   100%{
     transform: translateX(-50px);
     
-}
+  }
 }
 
 @keyframes iconslideLeft{
   0%{
     transform: translateX(60px);
    
+  }
 }
-}
+
 
 @keyframes iconrotate{
   0%{
     transform: rotate(360deg);
     
-  }
 }
-
+}
 @keyframes load-spinner {
   0% {
     visibility: hidden;
@@ -46,7 +59,7 @@
   to { transform: rotate(360deg); }
   }
 
-  
+ 
 
 /*animation carte menu*/
 
@@ -56,8 +69,12 @@
       transform: translateX(-50px);
       
     }
-    
+    100%{
+      transform: translateX(50px);
+     
   }
+    
+}
   
   @keyframes price-slide{
     0%{

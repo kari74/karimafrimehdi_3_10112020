@@ -18,6 +18,14 @@ html{
   font-family: 'Roboto';
 }
 
+.contenant{
+  justify-content: center;
+  max-width: 950px;
+  flex-direction: column;
+  display: flex;
+  align-self: center;
+  margin: auto;
+}
 
 .loading-spinner {
   position: fixed;
@@ -97,8 +105,9 @@ h1{
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: 'roboto','sans-sherif';
+  font-family: 'shrikhand','sans-sherif';
   width: 50%;
+  font-size: 18px;
 }
 
 .retour{
@@ -134,19 +143,18 @@ h1{
 
   }
 
-  h2{
+  .h2_manual{
     font-family: Roboto,sans-serif;
-    margin-left: 25px;
-    height: 60px;
-    margin-top: 45px;
     font-size: 25px;
+    margin-bottom: 0px;
+    padding-left: 37px;
+    padding-bottom: 15px;
   }
 /*manual*/
 
 .manual{
   padding: 0px;
   background-color: white;
-  width: 100%;
     .manual-card{
     border-radius: $background-carte solid 15px ;
     background-color: $background-carte;
@@ -161,19 +169,18 @@ h1{
     box-shadow: 5px 5px 5px rgb(214, 214, 214);
     padding-right: 5px;
     .number{
-        margin-right: 15px;
-        border: solid 2px $color-primary;
-        border-radius: 50%;
-        background:$color-primary;
-        font-size: 22px;
-        color: white;
-        height: 26px;
-        width: 26px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: -10px;
-        font-family: roboto,sans-serif;
+      margin-right: 15px;
+      border: solid 2px $color-primary;
+      border-radius: 50%;
+      background:$color-primary;
+      font-size: 17px;
+      color: white;
+      width: 17px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: -10px;
+      font-family: roboto,sans-serif;
     }
 
   }
@@ -192,7 +199,7 @@ h1{
   font-family: 'roboto';
   width: 70%;
   display: flex;
-  justify-content: center;
+
 }
 
 /*cards*/
@@ -201,6 +208,7 @@ h1{
   background: none;
   border: none;
   cursor: pointer;
+  padding: 20px;
   &:hover .heart_icon{
       animation: heart-down 800ms ease-in-out ;
       -webkit-animation: heart-down 800ms ease-in-out ;
@@ -239,7 +247,6 @@ a{
 
 .cards{
   background:$background-carte;
-  padding: 20px 0px;
   width: 100%;
   
 }
@@ -252,7 +259,7 @@ a{
 
 .resto_1_card{
   border: 1px solid white;
-  width: 85%;
+  width: 90%;
   border-radius: 25px;
   background-color: white;
   margin-bottom: 25px;
@@ -262,7 +269,6 @@ a{
   display: flex;
   flex-direction: column;
   margin-left: 35px;
-  margin-right: 35px;
 }
 .nom_resto{
   display: flex;
@@ -283,7 +289,7 @@ h3{
 .resto_h2{
   margin: 25px 0px 0px;
   background: $background-carte;
-  width: 100%;
+  padding-left: 50px;
 }
 
 .resto_news{

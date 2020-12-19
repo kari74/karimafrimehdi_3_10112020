@@ -1,46 +1,17 @@
-@media screen and (min-width: 1024px) and (max-width: 1400px){
-    
-  .manual{
-    display: flex;
-    flex-direction: row;
-  }
 
-  .menu__button{
+
+@media screen and (min-width: 810px) {
+
+    .menu__button{
       width: 30%;
     }
-
-    .resto{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    height: 950px;
-    flex-wrap: wrap;
-    width: 100%;
-    
-  }
-    .resto_1_card{
-      height: 340px;
-    }
-
-    .footer_h2{
-      font-size: 30px;
-      padding-top: 20px;
-    }
-    ul{
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-  }
-
-  @media screen and (min-width: 482px) and (max-width: 1024px) {
    
     .resto_1{
       margin-right: 35px;
     }
     .resto_h2{
       padding-top: 25px;
+    
     }
     .resto_1_card{
       height: 340px;
@@ -51,7 +22,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-around;
-      height: 950px;
+      height: 900px;
       flex-wrap: wrap;
       width: 100%;
       
@@ -61,9 +32,18 @@
       width: 30%;
     }
 
+    .container-manual{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 900px;
+      flex-direction: column;
+  }
     .manual{
       display: flex;
       flex-direction: row;
+      margin-left: 50px;
+      margin-right: 50px;
     }
     ul{
       display: flex;
@@ -74,9 +54,20 @@
     .manual-text{
       font-size: small;
     }
-  }
   
-  @media(max-width: 481px){
+  .footer_h2{
+    font-size: 30px;
+    padding-top: 20px;
+    
+  }
+  ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+  @media(max-width: 810px){
     
     .manual{
       width: 100%;
@@ -117,5 +108,9 @@
     }
     .carte{
       width: 100%;
+    }
+
+    .footer_h2{
+      padding-left: -50px;
     }
   }

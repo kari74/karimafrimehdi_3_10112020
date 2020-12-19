@@ -9,6 +9,16 @@ body {
   font-family: "Shrikhand" "sans-serif";
   src: url(Shrikhand-regular.otf) format(otf);
 }
+@keyframes slideLeftcarte {
+  100% {
+    transform: translateX(-50px);
+  }
+}
+@keyframes iconslideLeftcarte {
+  0% {
+    transform: translateX(50px);
+  }
+}
 @keyframes slideLeft {
   100% {
     transform: translateX(-50px);
@@ -54,6 +64,9 @@ body {
 @keyframes icon-slide {
   0% {
     transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(50px);
   }
 }
 @keyframes price-slide {
@@ -131,7 +144,6 @@ header {
 h4 {
   align-self: end;
   font-weight: 400;
-  font-family: roboto, sans-serif;
 }
 
 .entrees {
@@ -216,10 +228,13 @@ h4 {
 }
 .menu-choix:hover .menu__choix_plat_prix {
   animation: slideLeft 1s both;
+  transition: 0.5s;
 }
 .menu-choix:hover .menu__carte_enregistrement {
   opacity: 1;
+  transition: 1s ease-in;
   animation: iconslidLeft 1s both;
+  animation-direction: reverse;
 }
 .menu-choix:hover .menu__carte_enregistrement i {
   opacity: 1;
@@ -230,7 +245,6 @@ h4 {
 .menu_choix_plat_noms {
   font-weight: bold;
   font-size: 15px;
-  font-family: Roboto, sans-serif;
 }
 
 .menu__button {
@@ -258,49 +272,8 @@ h4 {
   text-overflow: ellipsis;
 }
 
-/*.menu__choix_plat_prix{
-    display: flex;
-    width: 5%;
-    height: 100%;
-    justify-content: flex-end;
-    align-items: flex-end;
-    background-color: white;
-    font-weight: bold;
-}*/
-/*.menu-choix:hover{
- /* .menu__choix_plat_prix{
-    display: flex;
-    width: 18%;
-    justify-content: flex-end;
-    align-items: center;
-    height: 67px;
-   /* align-self: flex-end;
-    align-items: flex-end;*/
-/*  background: white;
-    border: 1px solid transparent;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    visibility: visible;
-
-    animation: price-slide 800ms ease-out;
-    .menu__carte_enregistrement{
-      visibility: visible;
-    }
-  }
-}*/
 .menu__carte_enregistrement {
   opacity: 0;
-  /* display: flex;
-   width: 100px;
-   justify-content: flex-end;
-   height: 100%;
-   align-self: flex-end;
-   align-items: flex-end;
-
-   border: 1px solid transparent;
-   border-top-right-radius: 19%;
-   border-bottom-right-radius: 20%;
-   visibility: hidden;*/
 }
 
 .cercle {
@@ -378,14 +351,15 @@ h4 {
 }
 .footer-container .container {
   margin: auto;
+  max-width: 900px;
 }
 .footer-container .container ul {
   list-style-type: none;
-  margin: 10px;
-  margin-top: 0px;
+  margin-top: 5px;
   padding: 10px;
   padding-top: 0px;
   font-family: "roboto", sans-serif;
+  padding-bottom: 20px;
 }
 
 .footer__ul--a {
@@ -402,42 +376,11 @@ h4 {
   font-size: 20px;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1400px) {
-  .manual {
-    display: flex;
-    flex-direction: row;
-  }
-
+@media screen and (min-width: 810px) {
   .menu__button {
     width: 30%;
   }
 
-  .resto {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    height: 950px;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-
-  .resto_1_card {
-    height: 340px;
-  }
-
-  .footer_h2 {
-    font-size: 30px;
-    padding-top: 20px;
-  }
-
-  ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 482px) and (max-width: 1024px) {
   .resto_1 {
     margin-right: 35px;
   }
@@ -455,7 +398,7 @@ h4 {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    height: 950px;
+    height: 900px;
     flex-wrap: wrap;
     width: 100%;
   }
@@ -464,9 +407,19 @@ h4 {
     width: 30%;
   }
 
+  .container-manual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    flex-direction: column;
+  }
+
   .manual {
     display: flex;
     flex-direction: row;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 
   ul {
@@ -478,8 +431,19 @@ h4 {
   .manual-text {
     font-size: small;
   }
+
+  .footer_h2 {
+    font-size: 30px;
+    padding-top: 20px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
-@media (max-width: 481px) {
+@media (max-width: 810px) {
   .manual {
     width: 100%;
     display: flex;
@@ -521,6 +485,10 @@ h4 {
   .carte {
     width: 100%;
   }
+
+  .footer_h2 {
+    padding-left: -50px;
+  }
 }
 html {
   display: flex;
@@ -529,6 +497,15 @@ html {
 
 * {
   font-family: "Roboto";
+}
+
+.contenant {
+  justify-content: center;
+  max-width: 950px;
+  flex-direction: column;
+  display: flex;
+  align-self: center;
+  margin: auto;
 }
 
 .loading-spinner {
@@ -610,8 +587,9 @@ h1 {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: "roboto", "sans-sherif";
+  font-family: "shrikhand", "sans-sherif";
   width: 50%;
+  font-size: 18px;
 }
 
 .retour {
@@ -644,19 +622,18 @@ h1 {
   box-shadow: 5px 5px 5px 1px rgba(0, 0, 255, 0.2);
 }
 
-h2 {
+.h2_manual {
   font-family: Roboto, sans-serif;
-  margin-left: 25px;
-  height: 60px;
-  margin-top: 45px;
   font-size: 25px;
+  margin-bottom: 0px;
+  padding-left: 37px;
+  padding-bottom: 15px;
 }
 
 /*manual*/
 .manual {
   padding: 0px;
   background-color: white;
-  width: 100%;
 }
 .manual .manual-card {
   border-radius: #f6f6f6 solid 15px;
@@ -677,10 +654,9 @@ h2 {
   border: solid 2px #9356dc;
   border-radius: 50%;
   background: #9356dc;
-  font-size: 22px;
+  font-size: 17px;
   color: white;
-  height: 26px;
-  width: 26px;
+  width: 17px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -700,7 +676,6 @@ h2 {
   font-family: "roboto";
   width: 70%;
   display: flex;
-  justify-content: center;
 }
 
 /*cards*/
@@ -708,6 +683,7 @@ h2 {
   background: none;
   border: none;
   cursor: pointer;
+  padding: 20px;
 }
 .heart:hover .heart_icon {
   animation: heart-down 800ms ease-in-out;
@@ -743,7 +719,6 @@ a {
 
 .cards {
   background: #f6f6f6;
-  padding: 20px 0px;
   width: 100%;
 }
 
@@ -754,7 +729,7 @@ a {
 
 .resto_1_card {
   border: 1px solid white;
-  width: 85%;
+  width: 90%;
   border-radius: 25px;
   background-color: white;
   margin-bottom: 25px;
@@ -764,7 +739,6 @@ a {
   display: flex;
   flex-direction: column;
   margin-left: 35px;
-  margin-right: 35px;
 }
 
 .nom_resto {
@@ -785,7 +759,7 @@ h3 {
 .resto_h2 {
   margin: 25px 0px 0px;
   background: #f6f6f6;
-  width: 100%;
+  padding-left: 50px;
 }
 
 .resto_news {
