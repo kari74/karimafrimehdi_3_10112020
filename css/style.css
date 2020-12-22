@@ -16,12 +16,12 @@ body {
 }
 @keyframes iconslideLeftcarte {
   0% {
-    transform: translateX(50px);
+    transform: translateX(80px);
   }
 }
 @keyframes slideLeft {
   100% {
-    transform: translateX(-50px);
+    transform: translateX(-70px);
   }
 }
 @keyframes iconslideLeft {
@@ -140,6 +140,9 @@ header {
   font-family: Shrikhand, sans-serif;
   padding: 10px 0px;
 }
+.menu__title h2 {
+  padding: 10px;
+}
 
 h4 {
   align-self: end;
@@ -203,7 +206,6 @@ h4 {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  width: 100px;
 }
 .menu-choix .menu__carte_enregistrement {
   opacity: 0;
@@ -232,19 +234,21 @@ h4 {
 }
 .menu-choix:hover .menu__carte_enregistrement {
   opacity: 1;
-  transition: 1s ease-in;
-  animation: iconslidLeft 1s both;
-  animation-direction: reverse;
+  animation: iconslideLeftcarte 1s both;
 }
 .menu-choix:hover .menu__carte_enregistrement i {
   opacity: 1;
   animation: iconrotate 1s both;
-  animation-delay: 1s;
+  animation-delay: 0.3s;
 }
 
 .menu_choix_plat_noms {
   font-weight: bold;
   font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 70%;
 }
 
 .menu__button {
@@ -729,16 +733,14 @@ a {
 
 .resto_1_card {
   border: 1px solid white;
-  width: 90%;
   border-radius: 25px;
   background-color: white;
-  margin-bottom: 25px;
   justify-content: center;
   cursor: pointer;
   height: 350px;
   display: flex;
   flex-direction: column;
-  margin-left: 35px;
+  margin: 10px;
 }
 
 .nom_resto {

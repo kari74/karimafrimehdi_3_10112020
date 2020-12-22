@@ -20,6 +20,10 @@ header{
   border-top-right-radius: 45px;
   font-family: Shrikhand,sans-serif;
   padding: 10px 0px;
+
+  h2{
+    padding: 10px;
+  }
 }   
 
 h4{
@@ -87,7 +91,6 @@ border-bottom: 3px solid $color-tertiary;
    justify-content: center;
    align-items: center;
    padding: 20px;
-   width: 100px;
   }
   .menu__carte_enregistrement{
   opacity: 0;
@@ -115,26 +118,28 @@ border-bottom: 3px solid $color-tertiary;
   .menu__choix_plat_prix{
     animation: slideLeft 1s both;
     transition: 0.5s;
-    
-}
+    }
 
 .menu__carte_enregistrement{
   opacity: 1;
-  transition: 1s ease-in;
-  animation: iconslidLeft 1s both;
-  animation-direction: reverse;
+  animation: iconslideLeftcarte 1s both;
   i{
     opacity: 1;
     animation: iconrotate 1s both;
-    animation-delay: 1s;
+    animation-delay: 0.3s;
 
-  }
+    }
   }
 }
 
 .menu_choix_plat_noms{
     font-weight: bold;
     font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 70%;
+
 }
 
 
