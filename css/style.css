@@ -251,6 +251,14 @@ h4 {
   width: 70%;
 }
 
+.accompagnements {
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 70%;
+}
+
 .menu__button {
   background-color: #9356dc;
   color: #f6f6f6;
