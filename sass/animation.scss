@@ -17,6 +17,10 @@
 @keyframes slideLeft{
   100%{
     transform: translateX(-70px);
+    -webkit-transform: translateX(-70px);
+    -moz-transform: translateX(-70px);
+    -ms-transform: translateX(-70px);
+    -o-transform: translateX(-70px);
 }
 }
 
@@ -101,6 +105,7 @@
 
   /*animation menu*/
 
+  
   @keyframes open-menu{
     0%{
         visibility: visible;
@@ -115,4 +120,6 @@
         opacity: 1;
     }
 }
+
+
 

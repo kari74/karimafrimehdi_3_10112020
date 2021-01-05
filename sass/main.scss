@@ -1,6 +1,5 @@
 @import "variables.scss";
 @import "reset.scss";
-@import "font.scss";
 @import "animation.scss";
 @import "header.scss";
 @import "mixin.scss";
@@ -156,7 +155,6 @@ h1{
   padding: 0px;
   background-color: white;
     .manual-card{
-    border-radius: $background-carte solid 15px ;
     background-color: $background-carte;
     border-radius: 30px;
     display: flex;
@@ -321,6 +319,7 @@ h3{
   animation-delay: 0.5s;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
+  
 }
 
 
@@ -331,6 +330,7 @@ h3{
   animation-delay: 1s;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
+ 
 }
 
 
@@ -345,6 +345,7 @@ h3{
 
 .entree,.plats,.desserts{
   width: 95%;
+
 }
 
 /*images*/
