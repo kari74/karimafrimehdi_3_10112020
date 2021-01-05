@@ -35,11 +35,16 @@
     color: $background-carte;
     margin: 10px;
   }
+
+  .footer__ul--li{
+    margin-bottom: 5px;
+  }
   .footer__h2{
     color: $background-carte;
     margin: 10px;
     padding: 10px;
     padding-bottom:0px;
-    font-family: shrikhand, sans-serif;
+    font-family: 'shrikhand', cursive;
     font-size: 20px;
+    font-weight: 400;
 }
