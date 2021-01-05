@@ -224,10 +224,6 @@ h4 {
   height: 100px;
 }
 
-.fa-check-circle {
-  font-size: 20px;
-}
-
 .menu-choix:hover .menu__choix_plat {
   width: 60%;
 }
